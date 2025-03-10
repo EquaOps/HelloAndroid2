@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotationX="0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="113dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="50dp"
+        android:text="Hello 10+Android"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberField1"
+        android:layout_width="256dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="First number here!"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/numberField2"
+        android:layout_width="258dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Second number here!"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/numberField1"
+        app:layout_constraintStart_toStartOf="@+id/numberField1"
+        app:layout_constraintTop_toBottomOf="@+id/numberField1" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="28dp"
+        android:onClick="plusButtonClicked"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/minusButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberField2" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="minusButtonClicked"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicationButton"
+        app:layout_constraintStart_toEndOf="@+id/plusButton"
+        app:layout_constraintTop_toTopOf="@+id/plusButton" />
+
+    <Button
+        android:id="@+id/multiplicationButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="multiplicationButtonClicked"
+        android:text="*"
+        app:layout_constraintEnd_toStartOf="@+id/divisionButton"
+        app:layout_constraintStart_toEndOf="@+id/minusButton"
+        app:layout_constraintTop_toTopOf="@+id/minusButton" />
+
+    <Button
+        android:id="@+id/divisionButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="divisionButtonClicked"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/multiplicationButton"
+        app:layout_constraintTop_toTopOf="@+id/multiplicationButton" />
+
+    <TextView
+        android:id="@+id/resultField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:contentDescription="result of calculation"
+        android:text="Result Here!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plusButton" />
+
+    <ImageButton
+        android:id="@+id/resetButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#664FA3"
+        android:onClick="resetButtonClicked"
+        app:layout_constraintBottom_toBottomOf="@+id/numberField2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberField1"
+        app:layout_constraintTop_toTopOf="@+id/numberField1"
+        app:layout_constraintVertical_bias="0.52"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
